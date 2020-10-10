@@ -43,7 +43,7 @@ public class VerifyPostOrder {
         if (i < length - 1){
             right = verifyPostorder(rightArr);
         }
-        return left & right;
+        return left && right;
     }
 
 }

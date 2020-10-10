@@ -33,6 +33,7 @@ public class AddTwoNumbers {
             int val2 = stack2.isEmpty() ? 0 : stack2.pop().val;
             int val = (val1 + val2 + cur) % 10;
 
+            //头插法
             ListNode current = new ListNode(val);
             current.next = temp.next;
             temp.next = current;
