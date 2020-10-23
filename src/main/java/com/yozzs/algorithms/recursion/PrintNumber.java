@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Author: liuys23
  * @Date: 2020/7/12
- * 输入n，输出从0到最大的n位数
+ * 输入n，输出从1到最大的n位数
  * 全排列
  */
 public class PrintNumber {
