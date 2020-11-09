@@ -8,13 +8,13 @@ package com.yozzs.algorithms.array;
  */
 public class MajorityElement2 {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 2, 2, 2, 5, 4, 2};
+        int[] arr = {1, 2, 3};
         System.out.println(new MajorityElement2().majorityElement(arr));
     }
 
     public int majorityElement(int[] nums) {
         if (nums == null || nums.length <= 0) return -1;
-        int result = nums[0];
+        int result = -1;
         int times = 0;
         for (int num : nums) {
             if (num == result) {
@@ -26,7 +26,12 @@ public class MajorityElement2 {
                 times++;
             }
         }
-        return result;
+        //验证
+        int count = 0;
+        for (int num : nums) {
+            if (result == num) count++;
+        }
+        return count * 2 > nums.length ? result : -1;
     }
 
 
